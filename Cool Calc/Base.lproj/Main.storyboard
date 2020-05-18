@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cool CalcVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CoolCalcVC" customModule="Cool_Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8He-qL-GZo">
+                                <rect key="frame" x="86" y="431" width="242" height="305"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="klU-WY-wHe">
+                                        <rect key="frame" x="0.0" y="0.0" width="242" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syl-YW-gRi" customClass="DelleteBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="syl-YW-gRi" secondAttribute="height" multiplier="1:1" id="u7J-z4-teH"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="v8t-vu-bog"/>
+                                                </constraints>
+                                                <state key="normal" title="AC"/>
+                                                <connections>
+                                                    <action selector="allClearBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MH0-iX-2sZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-aX-8gs" customClass="DelleteBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="63" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="C"/>
+                                                <connections>
+                                                    <action selector="clearBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NT8-dB-GT6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGl-hR-AOr" customClass="DelleteBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="126" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="Del"/>
+                                                <connections>
+                                                    <action selector="deleteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLI-Df-RqA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkd-Ap-oKe" customClass="OperationBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="189" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="sumBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZGf-Qp-wLP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eO3-j1-Nyk">
+                                        <rect key="frame" x="0.0" y="63" width="242" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ8-yK-guT" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="dZ8-yK-guT" secondAttribute="height" multiplier="1:1" id="fVr-88-4WJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="sum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Nf-Ay-WWk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggp-kN-Bvx" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="63" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="num8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dux-Rh-zFD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vM-SI-8vX" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="126" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="num9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbA-bp-E93"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLW-uR-EGV" customClass="OperationBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="189" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="resBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="luH-BY-LQJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nnx-wG-TMV">
+                                        <rect key="frame" x="0.0" y="126" width="242" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-Zj-k1h" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="B6I-Zj-k1h" secondAttribute="height" multiplier="1:1" id="fdn-ND-rXC"/>
+                                                </constraints>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="num4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Zf-Df-gKK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ps-qI-orv" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="63" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="num5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohA-OH-R3s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiv-MX-8e5" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="126" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="num6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEi-6O-cYn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-cw-GHX" customClass="OperationBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="189" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="÷"/>
+                                                <connections>
+                                                    <action selector="divBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUx-nP-7UM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rbE-Cu-GEM">
+                                        <rect key="frame" x="0.0" y="189" width="242" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-5c-xI8" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ppv-5c-xI8" secondAttribute="height" multiplier="1:1" id="vIK-VW-BaL"/>
+                                                </constraints>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="num1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pd2-jF-QIH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P42-MU-0Yz" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="63" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="num2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fm5-sy-HzU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVB-Dx-5mY" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="126" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="num3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHC-BU-gaw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe4-ji-Nx8" customClass="OperationBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="189" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="x"/>
+                                                <connections>
+                                                    <action selector="multiBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jT-bf-3d2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QVS-Yq-Xvj">
+                                        <rect key="frame" x="0.0" y="252" width="242" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysI-bA-5AX" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ysI-bA-5AX" secondAttribute="height" multiplier="1:1" id="tjL-MG-Wuk"/>
+                                                </constraints>
+                                                <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="numPeriod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QwC-M6-SP1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhH-e9-gKi" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="63" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="num0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FiM-En-KFH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3W-Mf-Hw1" customClass="NumberBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="126" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="00"/>
+                                                <connections>
+                                                    <action selector="num00:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pll-2R-kjV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgu-gX-Tdx" customClass="OperationBtn" customModule="Cool_Calc" customModuleProvider="target">
+                                                <rect key="frame" x="189" y="0.0" width="53" height="53"/>
+                                                <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="resultBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3mn-xA-fKt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="B6I-Zj-k1h" firstAttribute="width" secondItem="syl-YW-gRi" secondAttribute="width" id="2u2-D1-S9k"/>
+                                    <constraint firstItem="ysI-bA-5AX" firstAttribute="width" secondItem="syl-YW-gRi" secondAttribute="width" id="DOq-Wy-61T"/>
+                                    <constraint firstItem="ppv-5c-xI8" firstAttribute="width" secondItem="syl-YW-gRi" secondAttribute="width" id="EUD-Fs-na2"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="305" id="Szf-2y-rFp"/>
+                                    <constraint firstItem="dZ8-yK-guT" firstAttribute="width" secondItem="syl-YW-gRi" secondAttribute="width" id="okn-7m-jFX"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-xQ-cUb">
+                                <rect key="frame" x="20" y="351" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cXC-5Y-06u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retro Calc fx-1257" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fl-9q-pdC">
+                                <rect key="frame" x="20" y="310.66666666666669" width="374" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wdu-xQ-cUb" secondAttribute="trailing" constant="20" id="3m9-jv-hhm"/>
+                            <constraint firstAttribute="trailing" secondItem="8He-qL-GZo" secondAttribute="trailing" constant="20" id="67b-D7-qA6"/>
+                            <constraint firstItem="8He-qL-GZo" firstAttribute="leading" secondItem="wdu-xQ-cUb" secondAttribute="trailing" constant="20" id="9A4-eT-Zfi"/>
+                            <constraint firstItem="wdu-xQ-cUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BT4-VO-j7F"/>
+                            <constraint firstItem="8He-qL-GZo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HU1-VL-8Ii"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wdu-xQ-cUb" secondAttribute="bottom" constant="20" id="K7A-eR-v6S"/>
+                            <constraint firstItem="3fl-9q-pdC" firstAttribute="leading" secondItem="wdu-xQ-cUb" secondAttribute="leading" id="Odu-ZR-PA7"/>
+                            <constraint firstItem="3fl-9q-pdC" firstAttribute="trailing" secondItem="wdu-xQ-cUb" secondAttribute="trailing" id="Q3s-6b-UFE"/>
+                            <constraint firstItem="klU-WY-wHe" firstAttribute="leading" secondItem="mGl-hR-AOr" secondAttribute="leading" constant="-126" id="SWq-L9-pAT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8He-qL-GZo" secondAttribute="bottom" id="Won-OZ-nbO"/>
+                            <constraint firstItem="8He-qL-GZo" firstAttribute="top" secondItem="wdu-xQ-cUb" secondAttribute="bottom" constant="20" id="XZ0-FG-3D2"/>
+                            <constraint firstItem="8He-qL-GZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="a7c-GI-hR1"/>
+                            <constraint firstItem="wdu-xQ-cUb" firstAttribute="top" secondItem="3fl-9q-pdC" secondAttribute="bottom" constant="20" id="dNb-td-U4l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="K7A-eR-v6S"/>
+                                <exclude reference="67b-D7-qA6"/>
+                                <exclude reference="9A4-eT-Zfi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="3m9-jv-hhm"/>
+                                <include reference="K7A-eR-v6S"/>
+                                <include reference="67b-D7-qA6"/>
+                                <include reference="9A4-eT-Zfi"/>
+                                <exclude reference="HU1-VL-8Ii"/>
+                                <exclude reference="XZ0-FG-3D2"/>
+                                <exclude reference="a7c-GI-hR1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="3m9-jv-hhm"/>
+                                <include reference="K7A-eR-v6S"/>
+                                <include reference="67b-D7-qA6"/>
+                                <include reference="9A4-eT-Zfi"/>
+                                <exclude reference="HU1-VL-8Ii"/>
+                                <exclude reference="XZ0-FG-3D2"/>
+                                <exclude reference="a7c-GI-hR1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="a7c-GI-hR1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="a7c-GI-hR1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="displayLbl" destination="wdu-xQ-cUb" id="OuY-6L-RUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.5" y="137.6953125"/>
+        </scene>
+    </scenes>
+</document>
